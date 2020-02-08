@@ -1,0 +1,15 @@
+name: basfparallel
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pandas
+  - rpy2=3.1
+  - pip
+  - r-caret
+  - r-kernlab
+  - pip:
+    - azureml-sdk[notebooks]
+    - tzlocal
+
