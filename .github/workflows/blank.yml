@@ -52,5 +52,7 @@ jobs:
       with:
         name: freeze
     - name: print out freeze
-      run: cat freeze.txt
+      run: |
+        find freeze
+        cat freeze/freeze.txt
       
