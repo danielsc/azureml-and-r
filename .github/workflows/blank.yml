@@ -32,3 +32,25 @@ jobs:
     - name: Run a multi-line script
       run: |
         python -c 'import graphviz; print(graphviz)'
+        pip freeze > freeze.txt
+    - name: Upload math result for job 1
+      uses: actions/upload-artifact@v1
+      with:
+        name: freeze
+        path: freeze.txt
+        
+
+  check:
+    needs: [build]
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
+    
+    steps:
+    - name: Download math result for job 1
+      uses: actions/download-artifact@v1
+      with:
+        name: freeze
+    - name: print out freeze
+      run: cat freeze.txt
+      
