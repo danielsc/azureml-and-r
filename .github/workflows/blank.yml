@@ -17,8 +17,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04@sha256:a1b514f3ba884b9a7695cbba5638933ddaf222e8ce3e8c81e8cdf861679abb05
-sha256:a1b514f3ba884b9a7695cbba5638933ddaf222e8ce3e8c81e8cdf861679abb05
+      image: mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
